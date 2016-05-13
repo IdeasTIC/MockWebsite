@@ -62,65 +62,66 @@
 	
 			<div id="topWrap" class="jumbotron">
 			<div class="container">
-				<div style="width:40%;margin:0 auto;">
 					
+                <div class="row">
 						
-					<div style="font-size:2em;width:30%;margin:0 auto">Crear tu idea</div>
-					<table>
-					<tr>
-					<td>
-					<label>Nombre:</label>	<input type="text"/>	
-					</td>
+                    <div class="col-md-6 col-md-offset-3">
+                        <form class="margin-base-vertical">
 					
-					</tr>
-					<tr></tr>
-					<tr>
+                            <div class="col-xs-12 text-center">		
+                                <h1>Crea tu Idea</h1>
+                            </div>	
 					
-					</td><td>
-					<label>Empresa:</label>	<input type="text"/>	
-					</td><td>
-					</tr><tr>
-					<tr></tr>
-					</td><td>
-					<label>Idea:</label>	<input type="text"/>
-					</td><td>
-					</tr>
-					<tr></tr>
-					<tr>	
-					</td><td>
-					<label>Correo:</label>	<input type="text"/>	
-					</td>
-					<tr></tr>
-					<td>
-					</tr>
-					<tr></tr>
+                            <div class="form-group center-block">
+                                <label for="inputdefault">Nombre:</label>
+                                <input class="form-control " id="inputdefault" type="text">
+                            </div>	
 					
-					<tr>
-					</td><td>
-					<label>Direccción:</label>	<input type="text"/>	
-					</td><td>
-					</tr>
+                            <div class="form-group center-block">
+                                <label for="inputdefault">Empresa:</label>
+                                <input class="form-control" id="inputdefault" type="text">
+                            </div>	
 					
-					<tr></tr>
-					<tr>
-					</td><td>
-					<label>Nombre:</label>	<input type="text"/>
-					</td><td>	
-					</tr>
-					</table>
-						<input type="button" value="Enviar" />
+                            <div class="form-group center-block">
+                                <label for="inputdefault">Idea:</label>
+                                <input class="form-control" id="inputdefault" type="text">
 					</div>
 					
-				<div class="col-md-6 col-md-pull-6 hidden-xs">
+                            <div class="form-group center-block">
+                                <label for="inputdefault">Correo:</label>
+                                <input class="form-control" id="inputdefault" type="text">
+                            </div>	
 					
+                            <div class="form-group center-block">
+                                <label for="inputdefault">Dirección:</label>
+                                <input class="form-control" id="inputdefault" type="text">
 				</div>
 				
+                            <button class="btn btn-default" >Enviar</button>
+
+                        </form>
 			</div>
 			</div>
 	
+            </div>
 	
+
+
+
+
+            <div class="col-md-6 col-md-pull-6 hidden-xs">
+
+            </div>
+
+        </div>
+
+
 	<footer>
 		<div class="container">
+
+
+
+
 			<div class="row">
 				<div class="col-xs-12 text-center">
 					<p>Copyright &copy; 2014 AppBay - Responsive App Landing Page Template. Built by <a href="http://bootstrapbay.com">BootstrapBay</a>. All Rights Reserved</p>
@@ -164,7 +165,7 @@
     <script src="js/flexslider.js"></script>
 	
 <script type="text/javascript">
-$(document).ready(function() {
+            $(document).ready(function () {
 
 	$('.mobileSlider').flexslider({
 		animation: "slide",
@@ -179,10 +180,10 @@ $(document).ready(function() {
 		directionNav: false
 	});
 		
-	$('a[href*=#]:not([href=#])').click(function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
+                $('a[href*=#]:not([href=#])').click(function () {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
 			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 			if ($(window).width() < 768) {
 				if (target.length) {
 					$('html,body').animate({
@@ -190,8 +191,7 @@ $(document).ready(function() {
 					}, 1000);
 					return false;
 				}
-			}
-			else {
+                        } else {
 				if (target.length) {
 					$('html,body').animate({
 						scrollTop: target.offset().top - $('.navbar').outerHeight(true) + 1
@@ -203,23 +203,22 @@ $(document).ready(function() {
 		}
 	});
 	
-	$('#toTop').click(function() {
+                $('#toTop').click(function () {
 		$('html,body').animate({
 			scrollTop: 0
 		}, 1000);
 	});
 	
 	var timer;
-    $(window).bind('scroll',function () {
+                $(window).bind('scroll', function () {
         clearTimeout(timer);
-        timer = setTimeout( refresh , 50 );
+                    timer = setTimeout(refresh, 50);
     });
     var refresh = function () {
-		if ($(window).scrollTop()>100) {
-			$(".tagline").fadeTo( "slow", 0 );
-		}
-		else {
-			$(".tagline").fadeTo( "slow", 1 );
+                    if ($(window).scrollTop() > 100) {
+                        $(".tagline").fadeTo("slow", 0);
+                    } else {
+                        $(".tagline").fadeTo("slow", 1);
 		}
     };
 		
